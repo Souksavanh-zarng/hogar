@@ -1,0 +1,533 @@
+{% extends "layout/layout.html" %} {% block title %}HOME - {% endblock %} {% block head %} {{ super() }} {% endblock %} {% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/card.css') }}">
+<style>
+    span {
+        font-family: Helvetica;
+    }
+    
+    .price {
+        font-size: 35px;
+        color: #676767;
+        font-weight: normal;
+    }
+    
+    .show-content {
+        font-size: 170px;
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+    }
+    
+    .collection-name {
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        color: #fff;
+    }
+    
+    #img-coll .col {
+        background-size: 100%;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    .abs {
+        background-color: #efefef;
+        background-image: url('static/images/used/homebg2-01.png');
+        /* background-image: url('http://i.stack.imgur.com/kx8MT.gif'); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<div class="wrapper" style="">
+    <!-- <img class="card-img-top" src="/static/images/used/homebg2-01.png" alt="" style="width: 100%;height: auto;"> -->
+    <!-- <img src="{{ url_for('static',filename='images/minimalistic-bed-with-interior.png') }}" alt="" style="width: 100%;height: auto;"> -->
+    <!-- <img src="{{ url_for('static',filename='images/used/homebg.png') }}" class="img-fluid" alt="Responsive image" style="width: 100%;height: auto;"> -->
+
+    <!-- <div class="has-bg-img">
+        <h2>Hero Section</h2>
+        <h4>It's easy to set background image with Torus Kit</h4>
+        <img src="{{ url_for('static',filename='images/used/homebg.png') }}" class="bg-img" alt="Responsive image" style="width: 100%;height: auto;">
+    </div> -->
+    <div class="container-fluid" style="padding: 90px;">
+        <div class="row mb-3">
+            <div class="col">
+                <span style="font-size: 50px;font-weight: bold;">New Arrivals</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <span style="font-size: 25px;">Let’s recreate our homes innovatively with style and in the way that your freedom is expressed through the newest Homeshow items.</span>
+            </div>
+            <div class="col align-self-end" style="text-align: end;">
+                View all
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="padding: 0px 90px 0px 90px;">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center " style="">
+
+            <!-- 1 -->
+            <div class="col mb-5">
+                <div class="card h-100" style="border: 0;">
+                    <!-- Sale badge-->
+                    <!-- <div class="badge text-white position-absolute align-self-center pt-3 pb-3" style="top: 1rem; left: 1.6rem;background-color:#FF0000;border-radius: 0;width: 126px;vertical-align: middle;font-size: 25px;font-weight: 400;">On Sale</div> -->
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/images/used/shop1.png" alt="" style="width: 100%;height: auto;">
+                    <!-- Product details-->
+                    <div class="card-body p-0 mt-5">
+                        <div class="text-start">
+                            <!-- Product name-->
+                            <span class="" style="font-size: 30px;color: #676767;font-weight: lighter;">Brand Name</span><br>
+                            <span class="" style="font-size: 40px;color: #000;font-weight: bold;">New Arrivals</span>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            <!-- <span class="text-muted text-decoration-line-through">$20.00</span> $18.00 -->
+                            <span class="price">฿ 10,500</span>
+                            <div class="row mt-2 justify-content-start">
+                                <div class="col" style="">
+                                    <img src="/static/images/used/color_type1.png" alt="" style="width: 49px;height: auto;border-bottom: 3px solid #676767;margin-right: 10px;" class="pb-1">
+                                    <img src="/static/images/used/color_type2.png" alt="" style="width: 49px;height: auto;margin-right: 10px;" class="pb-1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col mb-5">
+                <div class="card h-100" style="border: 0;">
+                    <!-- Sale badge-->
+                    <div class="badge text-white position-absolute align-self-center pt-3 pb-3" style="top: 1rem; left: 1.6rem;background-color:#FF0000;border-radius: 0;width: 126px;vertical-align: middle;font-size: 25px;font-weight: 400;">On Sale</div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/images/used/shop1.png" alt="" style="width: 100%;height: auto;">
+                    <!-- Product details-->
+                    <div class="card-body p-0 mt-5">
+                        <div class="text-start">
+                            <!-- Product name-->
+                            <span class="" style="font-size: 30px;color: #676767;font-weight: lighter;">Brand Name</span><br>
+                            <span class="" style="font-size: 40px;color: #000;font-weight: bold;">New Arrivals</span>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            <!-- <span class="text-muted text-decoration-line-through">$20.00</span> $18.00 -->
+                            <span class="price" style="color: #FF0000;">฿ 500</span><span class="price text-muted text-decoration-line-through ml-4 position-absolute" style="">
+                                ฿ 900
+                            </span>
+                            <div class="row mt-2 justify-content-start">
+                                <div class="col" style="">
+                                    <img src="/static/images/used/color_type1.png" alt="" style="width: 49px;height: auto;border-bottom: 3px solid #676767;margin-right: 10px;" class="pb-1">
+                                    <img src="/static/images/used/color_type2.png" alt="" style="width: 49px;height: auto;margin-right: 10px;" class="pb-1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col mb-5">
+                <div class="card h-100" style="border: 0;">
+                    <!-- Sale badge-->
+                    <!-- <div class="badge text-white position-absolute align-self-center pt-3 pb-3" style="top: 1rem; left: 1.6rem;background-color:#FF0000;border-radius: 0;width: 126px;vertical-align: middle;font-size: 25px;font-weight: 400;">On Sale</div> -->
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/images/used/shop1.png" alt="" style="width: 100%;height: auto;">
+                    <!-- Product details-->
+                    <div class="card-body p-0 mt-5">
+                        <div class="text-start">
+                            <!-- Product name-->
+                            <span class="" style="font-size: 30px;color: #676767;font-weight: lighter;">Brand Name</span><br>
+                            <span class="" style="font-size: 40px;color: #000;font-weight: bold;">New Arrivals</span>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            <!-- <span class="text-muted text-decoration-line-through">$20.00</span> $18.00 -->
+                            <span class="price">฿ 10,500</span>
+                            <div class="row mt-2 justify-content-start">
+                                <div class="col" style="">
+                                    <img src="/static/images/used/color_type1.png" alt="" style="width: 49px;height: auto;border-bottom: 3px solid #676767;margin-right: 10px;" class="pb-1">
+                                    <img src="/static/images/used/color_type2.png" alt="" style="width: 49px;height: auto;margin-right: 10px;" class="pb-1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col mb-5">
+                <div class="card h-100" style="border: 0;">
+                    <!-- Sale badge-->
+                    <!-- <div class="badge text-white position-absolute align-self-center pt-3 pb-3" style="top: 1rem; left: 1.6rem;background-color:#FF0000;border-radius: 0;width: 126px;vertical-align: middle;font-size: 25px;font-weight: 400;">On Sale</div> -->
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/images/used/shop1.png" alt="" style="width: 100%;height: auto;">
+                    <!-- Product details-->
+                    <div class="card-body p-0 mt-5">
+                        <div class="text-start">
+                            <!-- Product name-->
+                            <span class="" style="font-size: 30px;color: #676767;font-weight: lighter;">Brand Name</span><br>
+                            <span class="" style="font-size: 40px;color: #000;font-weight: bold;">New Arrivals</span>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            <!-- <span class="text-muted text-decoration-line-through">$20.00</span> $18.00 -->
+                            <span class="price">฿ 10,500</span>
+                            <div class="row mt-2 justify-content-start">
+                                <div class="col" style="">
+                                    <img src="/static/images/used/color_type1.png" alt="" style="width: 49px;height: auto;border-bottom: 3px solid #676767;margin-right: 10px;" class="pb-1">
+                                    <img src="/static/images/used/color_type2.png" alt="" style="width: 49px;height: auto;margin-right: 10px;" class="pb-1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="padding: 90px;overflow: hidden;"> <span style="" class="show-content">INNOVATION</span><span class="show-content ml-5" style="color:rgba(255,0,0,1);">REIMAGINED</span></div>
+
+    <div class="container-fluid" style="padding: 90px;">
+        <div class="row mb-3">
+            <div class="col">
+                <span style="font-size: 50px;font-weight: bold;">About Homeshow</span>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-10 col-sm-10 col-lg-4">
+                <span style="font-size: 25px;line-height: 30px;">Diversified in product lines, <br>Home Show offers a one-stop store where all furniture &amp; construction products are accessible at affordable prices. Together with innovation, <br>Home Show looks far beyond simplicity by staying ahead
+                    with designs &amp;functionality in every aspect including products themselves or even its store that aims to maximize customer satisfaction &amp; shopping experience. </span>
+
+            </div>
+            <div class="col align-self-end" style="text-align: end;">
+                View all
+            </div>
+        </div>
+        <div class="row mt-5 pt-5">
+            <div class="col">
+
+                <a style="    font-family: Helvetica;background-color: #000;color: #fff;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 30px;" class="pt-3 pb-3 pl-5 pr-5">Explore</a></div>
+        </div>
+    </div>
+    {% include "components/collection.html" %}
+
+    <div class="container-fluid" style="padding: 90px;">
+        <div class="row mb-3">
+            <div class="col">
+                <span style="font-size: 50px;font-weight: bold;">Hot Deals</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6"><span style="font-size: 25px;">Enjoy the best Homeshow deals. <br>Hop in to get access to our limited offers.</span>
+            </div>
+            <div class="col align-self-end" style="text-align: end;">
+                View all
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="padding: 0px 90px 0px 90px;">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center " style="">
+
+            <!-- 1 -->
+            <div class="col mb-5">
+                <div class="card h-100" style="border: 0;">
+                    <!-- Sale badge-->
+                    <!-- <div class="badge text-white position-absolute align-self-center pt-3 pb-3" style="top: 1rem; left: 1.6rem;background-color:#FF0000;border-radius: 0;width: 126px;vertical-align: middle;font-size: 25px;font-weight: 400;">On Sale</div> -->
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/images/used/shop1.png" alt="" style="width: 100%;height: auto;">
+                    <!-- Product details-->
+                    <div class="card-body p-0 mt-5">
+                        <div class="text-start">
+                            <!-- Product name-->
+                            <span class="" style="font-size: 30px;color: #676767;font-weight: lighter;">Brand Name</span><br>
+                            <span class="" style="font-size: 40px;color: #000;font-weight: bold;">New Arrivals</span>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            <!-- <span class="text-muted text-decoration-line-through">$20.00</span> $18.00 -->
+                            <span class="price">฿ 10,500</span>
+                            <div class="row mt-2 justify-content-start">
+                                <div class="col" style="">
+                                    <img src="/static/images/used/color_type1.png" alt="" style="width: 49px;height: auto;border-bottom: 3px solid #676767;margin-right: 10px;" class="pb-1">
+                                    <img src="/static/images/used/color_type2.png" alt="" style="width: 49px;height: auto;margin-right: 10px;" class="pb-1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col mb-5">
+                <div class="card h-100" style="border: 0;">
+                    <!-- Sale badge-->
+                    <div class="badge text-white position-absolute align-self-center pt-3 pb-3" style="top: 1rem; left: 1.6rem;background-color:#FF0000;border-radius: 0;width: 126px;vertical-align: middle;font-size: 25px;font-weight: 400;">On Sale</div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/images/used/shop1.png" alt="" style="width: 100%;height: auto;">
+                    <!-- Product details-->
+                    <div class="card-body p-0 mt-5">
+                        <div class="text-start">
+                            <!-- Product name-->
+                            <span class="" style="font-size: 30px;color: #676767;font-weight: lighter;">Brand Name</span><br>
+                            <span class="" style="font-size: 40px;color: #000;font-weight: bold;">New Arrivals</span>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            <!-- <span class="text-muted text-decoration-line-through">$20.00</span> $18.00 -->
+                            <span class="price" style="color: #FF0000;">฿ 500</span><span class="price text-muted text-decoration-line-through ml-4 position-absolute" style="">
+                                ฿ 900
+                            </span>
+                            <div class="row mt-2 justify-content-start">
+                                <div class="col" style="">
+                                    <img src="/static/images/used/color_type1.png" alt="" style="width: 49px;height: auto;border-bottom: 3px solid #676767;margin-right: 10px;" class="pb-1">
+                                    <img src="/static/images/used/color_type2.png" alt="" style="width: 49px;height: auto;margin-right: 10px;" class="pb-1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col mb-5">
+                <div class="card h-100" style="border: 0;">
+                    <!-- Sale badge-->
+                    <!-- <div class="badge text-white position-absolute align-self-center pt-3 pb-3" style="top: 1rem; left: 1.6rem;background-color:#FF0000;border-radius: 0;width: 126px;vertical-align: middle;font-size: 25px;font-weight: 400;">On Sale</div> -->
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/images/used/shop1.png" alt="" style="width: 100%;height: auto;">
+                    <!-- Product details-->
+                    <div class="card-body p-0 mt-5">
+                        <div class="text-start">
+                            <!-- Product name-->
+                            <span class="" style="font-size: 30px;color: #676767;font-weight: lighter;">Brand Name</span><br>
+                            <span class="" style="font-size: 40px;color: #000;font-weight: bold;">New Arrivals</span>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            <!-- <span class="text-muted text-decoration-line-through">$20.00</span> $18.00 -->
+                            <span class="price">฿ 10,500</span>
+                            <div class="row mt-2 justify-content-start">
+                                <div class="col" style="">
+                                    <img src="/static/images/used/color_type1.png" alt="" style="width: 49px;height: auto;border-bottom: 3px solid #676767;margin-right: 10px;" class="pb-1">
+                                    <img src="/static/images/used/color_type2.png" alt="" style="width: 49px;height: auto;margin-right: 10px;" class="pb-1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col mb-5">
+                <div class="card h-100" style="border: 0;">
+                    <!-- Sale badge-->
+                    <!-- <div class="badge text-white position-absolute align-self-center pt-3 pb-3" style="top: 1rem; left: 1.6rem;background-color:#FF0000;border-radius: 0;width: 126px;vertical-align: middle;font-size: 25px;font-weight: 400;">On Sale</div> -->
+                    <!-- Product image-->
+                    <img class="card-img-top" src="/static/images/used/shop1.png" alt="" style="width: 100%;height: auto;">
+                    <!-- Product details-->
+                    <div class="card-body p-0 mt-5">
+                        <div class="text-start">
+                            <!-- Product name-->
+                            <span class="" style="font-size: 30px;color: #676767;font-weight: lighter;">Brand Name</span><br>
+                            <span class="" style="font-size: 40px;color: #000;font-weight: bold;">New Arrivals</span>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            <!-- <span class="text-muted text-decoration-line-through">$20.00</span> $18.00 -->
+                            <span class="price">฿ 10,500</span>
+                            <div class="row mt-2 justify-content-start">
+                                <div class="col" style="">
+                                    <img src="/static/images/used/color_type1.png" alt="" style="width: 49px;height: auto;border-bottom: 3px solid #676767;margin-right: 10px;" class="pb-1">
+                                    <img src="/static/images/used/color_type2.png" alt="" style="width: 49px;height: auto;margin-right: 10px;" class="pb-1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-4" style="padding: 0px;overflow: hidden;background-image: url('/static/images/used/art1.png');background-repeat: no-repeat;background-size: 100%;height: 100vh;">
+        <div class="container-fluid" style="padding: 90px;padding-bottom: 20px;">
+            <div class="row mb-3 pl-5">
+                <div class="col-8 pl-5 mt-5" style="border-left: 5px solid #fff;">
+                    <span style="    font-family: Helvetica;
+                    font-style: normal;
+                    font-weight: bold;color: #fff;
+                    font-size: 50px;line-height: 60px;">We are inspired by innovations and technology to create home essentials for the better future of living.</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid" style="padding: 90px;">
+        <div class="row mb-3">
+            <div class="col"></div>
+            <div class="col-10 col-sm-10 col-lg-4">
+                <span style="font-size: 50px;font-weight: bold;">Innovation <br>&amp; Design</span>
+            </div>
+        </div>
+        <div class="row mt-3">
+
+            <div class="col align-self-end" style="text-align: end;">
+                View all
+            </div>
+            <div class="col-10 col-sm-10 col-lg-4">
+                <span style="font-size: 25px;line-height: 30px;">At Homeshow, we keep innovating to find the designs that match with lifestyle trends whilst also things ahead for the better future.</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container-fluid" style="padding: 20px;">
+    <div class="row mb-3">
+        <div class="col text-center p-3">
+            <img src="{{ url_for('static',filename='images/used/box.png') }}" class="bg-img mb-3" alt="Responsive image" style="width: 86px;height: auto;"><br>
+            <div class="row">
+                <span style="font-family: Helvetica;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;">Free Shipping</span>
+            </div>
+            <br>
+            <span style="font-family: Helvetica;
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 25px;" class="">Get free shipping on orders of <br> xxx THB or more</span>
+        </div>
+        <div class="col text-center p-3">
+            <img src="{{ url_for('static',filename='images/used/customer-support.png') }}" class="bg-img mb-3" alt="Responsive image" style="width: 86px;height: auto;"><br>
+            <div class="row">
+                <span style="font-family: Helvetica;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;">Customer Service</span>
+            </div>
+            <br>
+            <span style="font-family: Helvetica;
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 25px;" class="">Get free shipping on orders of <br> xxx THB or more</span>
+        </div>
+        <div class="col text-center p-3">
+            <img src="{{ url_for('static',filename='images/used/padlock.png') }}" class="bg-img mb-3" alt="Responsive image" style="width: 86px;height: auto;"><br>
+            <div class="row">
+                <span style="font-family: Helvetica;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;">Secured Payment</span>
+            </div>
+            <br>
+            <span style="font-family: Helvetica;
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 25px;" class="">Your payment information is <br>processed securely</span>
+        </div>
+    </div>
+</div>
+<p class="text-center" style="font-family: Helvetica;margin-top: 120px;
+font-style: normal;
+font-weight: bold;
+font-size: 60px;">Our Partners</p>
+
+
+<div class="container-fluid pb-5 pt-3" style="padding: 0px;">
+    <div class="scrolling-wrapper row flex-row flex-nowrap" style="overflow-x: auto;border: 0;">
+        <div class="card text-center" style="border: 0;">
+            <div class="row">
+                <div class="col p-4 text-center" onclick="location.replace('/');">
+                    <img src="/static/images/used/Image_11.png" class="img-fluid" style="width: 100%;height: auto;">
+                </div>
+
+                <div class="col p-4 text-center" onclick="location.replace('/');">
+                    <img src="/static/images/used/Image_11.png" class="img-fluid" style="width: 100%;height: auto;">
+                </div>
+                <div class="col p-4 text-center" onclick="location.replace('/');">
+                    <img src="/static/images/used/Image_11.png" class="img-fluid" style="width: 100%;height: auto;">
+                </div>
+                <div class="col p-4 text-center" onclick="location.replace('/');">
+                    <img src="/static/images/used/Image_11.png" class="img-fluid" style="width: 100%;height: auto;">
+                </div>
+                <div class="col p-4 text-center" onclick="location.replace('/');">
+                    <img src="/static/images/used/Image_11.png" class="img-fluid" style="width: 100%;height: auto;">
+                </div>
+                <div class="col p-4 text-center" onclick="location.replace('/');">
+                    <img src="/static/images/used/Image_11.png" class="img-fluid" style="width: 100%;height: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<style>
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+{% endblock %}

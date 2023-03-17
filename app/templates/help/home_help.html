@@ -1,0 +1,155 @@
+{% extends "layout/layout.html" %} {% block title %}Help Center - {% endblock %} {% block head %} {{ super() }} {% endblock %} {% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/card.css') }}">
+
+<style>
+    .abs {
+        background-image: url('/static/images/used/help.png') !important;
+        height: 716px !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+</style>
+<div class="wrapper" style="">
+
+
+    <div class="container-fluid pt-5" style="padding: 30px;">
+        <p class="text-center mt-2" style="font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+        color: rgba(0,0,0,1);"><span>Order & Shipping</span><span style="vertical-align: middle;">
+                    <img src="/static/images/used/right-arrow.png" alt="" style="width: 23px;height: auto;">
+                </span> </p>
+        <div class="row mt-4">
+            <div class="col p-1">
+                <div class="" style="background-color: #8E8E8E;">
+                    <div style="" id="img-blur"><img src="static/images/used/blur_9.png" alt="" style="height: 140px;visibility: hidden;"></div>
+                    <span class="collection-name centered">วิธีการสั่งซื้อสินค้า</span></div>
+
+            </div>
+
+
+        </div>
+        <div class="row mt-1">
+            <div class="col-6 p-1">
+                <div class="" style="background-color: #8E8E8E;">
+                    <div style="" id="img-blur"><img src="static/images/used/blur_9.png" alt="" style="height: 140px;visibility: hidden;"></div>
+                    <span class="collection-name centered">นโยบายการรับประกันสินค้า</span></div>
+
+            </div>
+            <div class="col-6 p-1">
+                <div class="" style="background-color: #8E8E8E;">
+                    <div style="" id="img-blur"><img src="static/images/used/blur_9.png" alt="" style="height: 140px;visibility: hidden;"></div>
+                    <span class="collection-name centered">นโยบายการคืนเงินและสินค้า</span></div>
+
+            </div>
+
+
+        </div>
+        <div class="row mt-1">
+            <div class="col-6 p-1">
+                <div class="" style="background-color: #8E8E8E;">
+                    <div style="" id="img-blur"><img src="static/images/used/blur_9.png" alt="" style="height: 140px;visibility: hidden;"></div>
+                    <span class="collection-name centered">นโยบายการซื้อสินค้า</span></div>
+
+            </div>
+            <div class="col-6 p-1">
+                <div class="" style="background-color: #8E8E8E;">
+                    <div style="" id="img-blur"><img src="static/images/used/blur_9.png" alt="" style="height: 140px;visibility: hidden;"></div>
+                    <span class="collection-name centered">การติดตามการจัดส่ง</span></div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5" style="padding: 30px;">
+        <p class="text-center mt-2" style="font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+        color: rgba(0,0,0,1);"><span>Customer Section</span><span style="vertical-align: middle;">
+                    <img src="/static/images/used/right-arrow.png" alt="" style="width: 23px;height: auto;">
+                </span> </p>
+        <div class="row mt-4">
+            <div class="col p-1">
+                <div class="" style="background-color: #8E8E8E;">
+                    <div style="" id="img-blur"><img src="static/images/used/blur_9.png" alt="" style="height: 140px;visibility: hidden;"></div>
+                    <span class="collection-name centered">ความคิดเห็นของลูกค้า</span></div>
+
+            </div>
+
+
+        </div>
+        <div class="row mt-1">
+            <div class="col p-1">
+                <div class="" style="background-color: #8E8E8E;">
+                    <div style="" id="img-blur"><img src="static/images/used/blur_9.png" alt="" style="height: 140px;visibility: hidden;"></div>
+                    <span class="collection-name centered">ขอใบกำกับภาษี</span></div>
+
+            </div>
+
+
+        </div>
+        <div class="row mt-1">
+            <div class="col p-1">
+                <div class="" style="background-color: #8E8E8E;">
+                    <div style="" id="img-blur"><img src="static/images/used/blur_9.png" alt="" style="height: 140px;visibility: hidden;"></div>
+                    <span class="collection-name centered">บัญชีและการลงทะเบียน</span></div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="container-fluid pt-5 pb-5" style="padding: 30px;">
+        <p class="text-center mt-2" style="font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+        color: rgba(0,0,0,1);"><span>Customer Privacy</span><span style="vertical-align: middle;">
+                    <img src="/static/images/used/right-arrow.png" alt="" style="width: 23px;height: auto;">
+                </span> </p>
+
+        <div class="row mt-4">
+            <div class="col-6 p-1">
+                <div class="" style="background-color: #8E8E8E;">
+                    <div style="" id="img-blur"><img src="static/images/used/blur_9.png" alt="" style="height: 140px;visibility: hidden;"></div>
+                    <span class="collection-name centered">นโยบายส่วนบุคคล</span></div>
+
+            </div>
+            <div class="col-6 p-1">
+                <div class="" style="background-color: #8E8E8E;">
+                    <div style="" id="img-blur"><img src="static/images/used/blur_9.png" alt="" style="height: 140px;visibility: hidden;"></div>
+                    <span class="collection-name centered text-center" style="    line-height: 45px;">นโยบายการเก็บข้อมูล<br> (PDPA)</span></div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Sarabun', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 60px;
+        color: #fff;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+</style>
+{% include "components/collection.html" %} {% include "components/service.html" %} {% endblock %}

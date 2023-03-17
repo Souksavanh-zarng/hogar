@@ -1,0 +1,73 @@
+<div class="wrapper" style="">
+    <div class="container-fluid" style="padding: 90px;padding-bottom: 20px;">
+        <div class="row mb-3">
+            <div class="col">
+                <span style="font-size: 50px;font-weight: bold;">Explore the collections</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid pb-5" style="padding: 0px;overflow: hidden;">
+
+        <div class="row" id="img-coll">
+            <div class="col text-center" style="background-image: url('/static/images/used/collection/Materials.png');background-repeat: no-repeat;">
+                <span class="collection-name centered">Materials</span>
+                <img src="{{ url_for('static',filename='images/used/collection/Materials.png') }}" class="bg-img" alt="Responsive image" style="width: 100%;height: auto;visibility: hidden;">
+
+            </div>
+            <div class="col" style="background-image: url('/static/images/used/collection/Furniture.png');background-repeat: no-repeat;">
+                <span class="collection-name centered">Furniture</span>
+                <!-- <img src="{{ url_for('static',filename='images/used/material.png') }}" class="bg-img" alt="Responsive image" style="width: 100%;height: auto;"> -->
+            </div>
+            <div class="col text-center" style="background-image: url('/static/images/used/collection/Decoration.png');background-repeat: no-repeat;">
+                <span class="collection-name centered">Decoration</span>
+
+            </div>
+            <div class="col text-center" style="background-image: url('/static/images/used/collection/Kitchen.png');background-repeat: no-repeat;">
+                <span class="collection-name centered">Kitchen</span>
+
+            </div>
+            <div class="col text-center" style="background-image: url('/static/images/used/collection/Home_office.png');background-repeat: no-repeat;">
+                <span class="collection-name centered" style="line-height: 28px;">Home&<br>office</span>
+
+            </div>
+            <div class="col text-center" style="background-image: url('/static/images/used/collection/Toilet.png');background-repeat: no-repeat;">
+                <span class="collection-name centered">Toilet</span>
+
+            </div>
+            <div class="col text-center" style="background-image: url('/static/images/used/collection/wood_Tiles.png');background-repeat: no-repeat;">
+                <span class="collection-name centered">Wood & Tiles</span>
+
+            </div>
+            <div class="col text-center" style="background-image: url('/static/images/used/collection/Bedroom.png');background-repeat: no-repeat;" onclick="location.replace('/product_bedroom');">
+                <span class="collection-name centered">Bedroom</span>
+
+            </div>
+            <div class="col text-center" style="background-image: url('/static/images/used/collection/Living Room.png');background-repeat: no-repeat;">
+                <span class="collection-name centered" style="line-height: 28px;">Living<br>Room</span>
+
+            </div>
+            <div class="col text-center" style="background-image: url('/static/images/used/collection/Smart Home.png');;background-repeat: no-repeat;height: 514px;width: 92px;">
+
+                <span class="collection-name centered" style="line-height: 28px;">Smart<br>Home</span>
+
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .collection-name {
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        color: #fff;
+    }
+</style>

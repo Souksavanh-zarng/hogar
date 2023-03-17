@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao&display=swap');
+    </style>
+    <link rel="icon" type="image/x-icon" href="/static/odm.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% endblock %}HOGAR</title>
+    <!-- <title>ລະບົບຂາຍ ແລະ ບໍລິການ</title> -->
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/navbar.css') }}"> -->
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js">
+    </script>
+    <!-- <link rel="stylesheet" href="/static/style.css" /> -->
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    </style>{% endblock %}
+    <style>
+        html {
+            scroll-behavior: smooth !important;
+        }
+        
+        body {
+            font-family: 'Helvetica';
+        }
+        
+        nav#navbar-top a {
+            color: #fff !important;
+            font-size: 21px !important;
+        }
+        
+        nav#navbar-top ul li {
+            margin-right: 20px;
+        }
+        
+        nav#navbar-top li.nav a {
+            font-family: Helvetica;
+            margin-right: 20px !important;
+        }
+        
+        #Group_32 svg {
+            width: 40px;
+            height: 40px;
+            fill: #fff;
+            margin: 0px;
+        }
+        
+        ul#left-menu {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" style="padding: 0px !important;">
+        <!-- Page Content  -->
+        <div id="">
+            <div class="abs" style="">
+                {%if head_content == None or head_content==''%}{%else%}
+                <div class="row mb-3 pl-5 left-centered" style="position: absolute;
+                top: 35%;
+                left: 10%;
+                transform: translate(-10%, -35%);border-left: 5px solid #fff;height: 160px;">
+                    <div class="col pl-5 mt-5">
+                        <span style="font-family: Helvetica;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 120px;
+                        color: rgba(255, 255, 255, 1);">{{head_content}}</span>
+                    </div>
+                </div>{%endif%}
+
+
+                <nav class="navbar navbar-expand-md p-5" style="padding-top: 45px !important;" id="navbar-top">
+                    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                        <ul class="navbar-nav mr-auto" id="left-menu">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/product_bedroom">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Promotion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/inspiration">Inspiration</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/help">Help</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mx-auto order-0">
+                        <!-- <a class="navbar-brand mx-auto" href="#">HOGAR</a> -->
+                        <a class="navbar-brand mx-auto" href="/">
+                            <div class="row">
+                                <div id="Group_32">
+                                    <svg class="Path_79" viewBox="67.019 1287.372 34.42 41.284">
+                                        <path id="Path_79" d="M 73.90815734863281 1287.371948242188 L 73.90815734863281 1307.091796875 L 94.54985809326172 1307.091796875 L 94.54985809326172 1287.371948242188 L 101.4390106201172 1287.371948242188 L 101.4390106201172 1328.655639648438 L 94.54985809326172 1328.655639648438 L 94.54985809326172 1308.935668945312 L 73.90815734863281 1308.935668945312 L 73.90815734863281 1328.655639648438 L 67.01899719238281 1328.655639648438 L 67.01899719238281 1287.371948242188 L 73.90815734863281 1287.371948242188 Z">
+                                        </path>
+                                    </svg>
+                                    <svg class="Path_80" viewBox="246.277 1287.372 41.284 41.284">
+                                        <path id="Path_80" d="M 287.5606384277344 1308.013671875 C 287.5606384277344 1313.71630859375 285.5413818359375 1318.58251953125 281.5038146972656 1322.611694335938 C 277.4657897949219 1326.641235351562 272.6043090820312 1328.655639648438 266.9189147949219 1328.655639648438 C 261.2162170410156 1328.655639648438 256.3502807617188 1326.641235351562 252.3211517333984 1322.611694335938 C 248.2915649414062 1318.58251953125 246.2769927978516 1313.71630859375 246.2769927978516 1308.013671875 C 246.2769927978516 1302.328247070312 248.2915649414062 1297.466552734375 252.3211517333984 1293.4287109375 C 256.3502807617188 1289.391235351562 261.2162170410156 1287.371948242188 266.9189147949219 1287.371948242188 C 272.6043090820312 1287.371948242188 277.4657897949219 1289.391235351562 281.5038146972656 1293.4287109375 C 285.5413818359375 1297.466552734375 287.5606384277344 1302.328247070312 287.5606384277344 1308.013671875 Z M 253.1661529541016 1308.013671875 C 253.1661529541016 1313.22119140625 254.5064544677734 1317.660400390625 257.1870727539062 1321.330810546875 C 259.8672485351562 1325.001831054688 263.1113586425781 1326.837280273438 266.9189147949219 1326.837280273438 C 270.7091674804688 1326.837280273438 273.9528198242188 1325.001831054688 276.6507568359375 1321.330810546875 C 279.3482666015625 1317.660400390625 280.6972351074219 1313.22119140625 280.6972351074219 1308.013671875 C 280.6972351074219 1302.823608398438 279.3482666015625 1298.388671875 276.6507568359375 1294.709106445312 C 273.9528198242188 1291.030029296875 270.7091674804688 1289.190185546875 266.9189147949219 1289.190185546875 C 263.1113586425781 1289.190185546875 259.8672485351562 1291.030029296875 257.1870727539062 1294.709106445312 C 254.5064544677734 1298.388671875 253.1661529541016 1302.823608398438 253.1661529541016 1308.013671875 Z">
+                                        </path>
+                                    </svg>
+                                    <svg class="Path_81" viewBox="457.488 1287.372 41.284 41.284">
+                                        <path id="Path_81" d="M 478.1299438476562 1289.190185546875 C 474.3223571777344 1289.190185546875 471.0782775878906 1291.030029296875 468.3981018066406 1294.709106445312 C 465.7172546386719 1298.388671875 464.3771667480469 1302.823608398438 464.3771667480469 1308.013671875 C 464.3771667480469 1313.22119140625 465.7172546386719 1317.660400390625 468.3981018066406 1321.330810546875 C 471.0782775878906 1325.001831054688 474.3223571777344 1326.837280273438 478.1299438476562 1326.837280273438 C 480.4005126953125 1326.837280273438 482.5047607421875 1326.137451171875 484.4427490234375 1324.737182617188 C 486.3802795410156 1323.337158203125 487.9810180664062 1321.4677734375 489.2447204589844 1319.128662109375 C 490.730224609375 1316.294677734375 491.5921020507812 1313.2041015625 491.8314208984375 1309.857421875 L 480.4349060058594 1309.857421875 L 480.4349060058594 1308.013671875 L 491.9080200195312 1308.013671875 L 495.6727600097656 1308.013671875 L 496.9533386230469 1308.013671875 L 498.7716674804688 1308.013671875 C 498.7716674804688 1310.8818359375 498.2294921875 1313.567138671875 497.1453857421875 1316.068115234375 C 496.0608520507812 1318.569580078125 494.5884399414062 1320.7509765625 492.7277221679688 1322.611694335938 C 490.8494567871094 1324.489868164062 488.6597290039062 1325.966552734375 486.15869140625 1327.042236328125 C 483.6572570800781 1328.117919921875 480.9810791015625 1328.655639648438 478.1299438476562 1328.655639648438 C 472.42724609375 1328.655639648438 467.5613098144531 1326.641235351562 463.5321655273438 1322.611694335938 C 459.5025939941406 1318.58251953125 457.4880065917969 1313.71630859375 457.4880065917969 1308.013671875 C 457.4880065917969 1302.328247070312 459.5025939941406 1297.466552734375 463.5321655273438 1293.4287109375 C 467.5613098144531 1289.391235351562 472.42724609375 1287.371948242188 478.1299438476562 1287.371948242188 C 480.9810791015625 1287.371948242188 483.6572570800781 1287.9140625 486.15869140625 1288.998291015625 C 488.6597290039062 1290.08251953125 490.8494567871094 1291.55517578125 492.7277221679688 1293.415893554688 L 491.4215698242188 1294.722045898438 C 489.7311401367188 1293.031616210938 487.7419128417969 1291.687255859375 485.4544677734375 1290.6884765625 C 483.1661376953125 1289.689819335938 480.724853515625 1289.190185546875 478.1299438476562 1289.190185546875 Z">
+                                        </path>
+                                    </svg>
+                                    <svg class="Path_82" viewBox="656.704 1287.372 40.515 41.284">
+                                        <path id="Path_82" d="M 680.0092163085938 1308.013671875 L 674.1699829101562 1295.515869140625 L 668.3309326171875 1308.013671875 L 658.7269897460938 1328.655639648438 L 656.7039794921875 1328.655639648438 L 666.3074951171875 1308.013671875 L 673.171142578125 1293.339111328125 L 675.936767578125 1287.371948242188 L 677.960205078125 1287.371948242188 L 687.5894775390625 1308.013671875 L 697.218994140625 1328.655639648438 L 689.6384887695312 1328.655639648438 L 680.0092163085938 1308.013671875 Z">
+                                        </path>
+                                    </svg>
+                                    <svg class="Path_83" viewBox="859.609 1287.372 31.423 41.284">
+                                        <path id="Path_83" d="M 876.8190307617188 1308.935668945312 L 866.4979248046875 1308.935668945312 L 866.4979248046875 1328.655639648438 L 859.6090087890625 1328.655639648438 L 859.6090087890625 1287.371948242188 L 880.2509765625 1287.371948242188 C 882.453125 1287.371948242188 884.4592895507812 1287.978271484375 886.2691650390625 1289.190185546875 C 889.44482421875 1291.341552734375 891.032470703125 1294.321044921875 891.032470703125 1298.128173828125 C 891.032470703125 1300.347900390625 890.434814453125 1302.341186523438 889.2399291992188 1304.108154296875 C 888.0446166992188 1305.875366210938 886.4995727539062 1307.17724609375 884.6044921875 1308.013671875 C 886.4995727539062 1308.850463867188 888.0446166992188 1310.152099609375 889.2399291992188 1311.919311523438 C 890.434814453125 1313.686401367188 891.032470703125 1315.671142578125 891.032470703125 1317.87353515625 L 891.032470703125 1328.655639648438 L 884.1693115234375 1328.655639648438 L 884.1693115234375 1323.277465820312 L 884.1693115234375 1317.87353515625 C 884.1693115234375 1315.70556640625 883.5969848632812 1313.801635742188 882.453125 1312.162719726562 C 881.30908203125 1310.523559570312 879.8922119140625 1309.499145507812 878.2019653320312 1309.08935546875 C 877.7579345703125 1308.986938476562 877.2968139648438 1308.935668945312 876.8190307617188 1308.935668945312 Z M 876.8190307617188 1289.190185546875 L 866.4979248046875 1289.190185546875 L 866.4979248046875 1307.091796875 L 876.8190307617188 1307.091796875 C 877.2968139648438 1307.091796875 877.7579345703125 1307.04052734375 878.2019653320312 1306.938232421875 C 879.8922119140625 1306.54541015625 881.30908203125 1305.529541015625 882.453125 1303.890625 C 883.5969848632812 1302.251708984375 884.1693115234375 1300.33056640625 884.1693115234375 1298.128173828125 C 884.1693115234375 1295.9599609375 883.5969848632812 1294.060668945312 882.453125 1292.429931640625 C 881.30908203125 1290.799682617188 879.8922119140625 1289.779296875 878.2019653320312 1289.36962890625 C 877.6900024414062 1289.25048828125 877.2288818359375 1289.190185546875 876.8190307617188 1289.190185546875 Z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    </div>
+                    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item align-self-center">
+                                <a class="nav-link" href="#"><img src="{{ url_for('static',filename='images/used/search.png') }}" class="img-fluid" alt="Responsive image" style="width: 27px;height: auto;"></a>
+                            </li>
+                            <li class="nav-item align-self-center">
+                                <a class="nav-link" href="/join_membership"><img src="{{ url_for('static',filename='images/used/user.png') }}" class="img-fluid" alt="Responsive image" style="width: 27px;height: auto;"></a>
+                            </li>
+                            <li class="nav-item align-self-center">
+                                <a class="nav-link" href="/mycart"><img src="{{ url_for('static',filename='images/used/shopping-cart.png') }}" class="img-fluid" alt="Responsive image" style="width: 28px;height: auto;"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+
+        </div> {% block content %} {% endblock %}
+    </div>
+
+    <footer class="footer" style="background-color: #F2F1F1;">
+        <div class="container-fluid pt-5 pb-5" style="padding-left: 90px;padding-right: 90px;">
+            <!-- Example row of columns -->
+            <div class="row align-items-end">
+                <div class="col-md-4 col-sm-12">
+                    <img src="{{ url_for('static',filename='images/used/HOMESHOWHOGAR_bk.png') }}" class="img-fluid" alt="Responsive image" style="width: 143px;height: auto;">
+                    <div class="row">
+                        <div class="col">
+                            <p style="    font-family: Leelawadee;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 30px;color: rgba(95,94,90,1);line-height: 38px;">Sign up for latest offers <br>and brand new items from us</p>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col"> <input type="email" class="form-control" id="email" placeholder="E-mail" autocomplete="off">
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 text-center">
+                    <img src="{{ url_for('static',filename='images/used/HOMESHOWHOGAR_bk.png') }}" class="img-fluid" alt="Responsive image" style="width: 143px;height: auto;visibility: hidden;">
+                    <div class="row mb-4">
+                        <div class="col"><span><img src="{{ url_for('static',filename='images/used/facebook.png') }}" class="img-fluid" alt="Responsive image" style="width: 52px;height: auto;"></span>&nbsp;&nbsp;
+                            <span><img src="{{ url_for('static',filename='images/used/instagram.png') }}" class="img-fluid" alt="Responsive image" style="width: 49px;height: auto;"></span></div>
+                    </div>
+                    <span style="font-family: Myriad Pro;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                    color: rgba(95,94,90,1);">© 2022, Homeshow. All rights reserved.</span>
+                    <div>
+                        <img src="{{ url_for('static',filename='images/used/payment_method_bk.png') }}" class="img-fluid" alt="Responsive image" style="width: 630px;height: auto;">
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <p class="ct-ft">About</p>
+                    <p class="ct-ft">Product</p>
+                    <p class="ct-ft">Inspiration</p>
+                    <p class="ct-ft">Promotion</p>
+                    <p class="ct-ft">Help</p>
+                    <p class="ct-ft">Contact</p>
+                    <div class="row">
+                        <div class="col" style="text-align: right;">
+                            <span><img src="{{ url_for('static',filename='images/used/usa.png') }}" class="img-fluid" alt="Responsive image" style="width: 31px;height: auto;"></span>&nbsp;
+                            <span style="font-family: Myriad Pro;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 20px;
+                            color: rgba(95,94,90,1);">United States (USD  $ )</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.min.js"></script> -->
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.5/dist/sweetalert2.all.min.js"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- datatable -->
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#table_id').DataTable({
+                "oLanguage": {
+                    "sSearch": "ຄົ້ນຫາ:"
+                },
+                "lengthChange": false,
+                'iDisplayLength': 10,
+                "language": {
+                    "lengthMenu": "ສະແດງ _MENU_ ລາຍການ",
+                    "zeroRecords": "ບໍ່ພົບລາຍການ - sorry",
+                    "info": "ໜ້າທີ _PAGE_ ຂອງ _PAGES_",
+                    "infoEmpty": "ບໍມີລາຍການ",
+                    "infoFiltered": "(ຄົ້ນຫາຈາກ _MAX_ ລາຍການ)",
+                    "paginate": {
+                        "previous": "ກັບຄືນ",
+                        "next": "ຕໍ່ໄປ"
+                    },
+
+                }
+            });
+        });
+        $('#tableproduct').DataTable();
+        $('.dataTables_length').addClass('bs-select');
+    </script>
+    <script>
+        $('.navTrigger').click(function() {
+            $(this).toggleClass('active');
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+
+        });
+    </script>
+</body>
+<style>
+    .ct-ft {
+        text-align: right;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        color: rgba(95, 94, 90, 1);
+    }
+</style>
+<style>
+    .back-to-top {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        display: none;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 400);
+            return false;
+        });
+    });
+</script>
+<style>
+    .left-centered {
+        font-style: normal;
+        line-height: 60px;
+        color: #fff;
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 120px;
+        color: rgba(255, 255, 255, 1);
+    }
+</style>
+
+</html>

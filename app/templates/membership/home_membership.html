@@ -1,0 +1,76 @@
+{% extends "layout/layout.html" %} {% block title %}MEMBERSHIP - {% endblock %} {% block head %} {{ super() }} {% endblock %} {% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/card.css') }}">
+<style>
+    .abs {
+        background-color: #000;
+        height: 25vh !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+</style>
+<div class="wrapper" style="">
+    <div class="container" style="padding-left: 80px;padding-right: 80px;">
+        <div class="py-5 text-center mt-3">
+            <h2 style="font-size: 50px;
+            font-weight: bold;">Join our Homeshow community!</h2>
+            <hr style="height: 4px;">
+
+            <div class="row mb-4">
+                <div class="col"><span>Log-in with </span>&nbsp;&nbsp;<span><img src="{{ url_for('static',filename='images/used/facebook.png') }}" class="img-fluid" alt="Responsive image" style="width: 45px;height: auto;"></span>&nbsp;&nbsp;
+                    <span><img src="{{ url_for('static',filename='images/used/instagram.png') }}" class="img-fluid" alt="Responsive image" style="width: 41px;height: auto;"></span></div>
+            </div>
+        </div>
+
+        <div class="row mb-4" style="padding-left: 90px;padding-right: 80px;">
+            <div class="col-3 align-self-center"><label for="firstName " style="font-size: 23px;
+                font-weight: bold;">Name</label></div>
+            <div class="col-9 align-self-center"><input type="text" class="form-control" id="firstName" placeholder="" value="" required="" style="border-radius: 0;" autocomplete="off"></div>
+        </div>
+        <div class="row mb-4" style="padding-left: 90px;padding-right: 80px;">
+            <div class="col-3 align-self-center"><label for="firstName " style="font-size: 23px;
+                font-weight: bold;">Phone No.</label></div>
+            <div class="col-9 align-self-center"><input type="tel" class="form-control" id="firstName" placeholder="" value="" required="" style="border-radius: 0;" autocomplete="off"></div>
+        </div>
+        <div class="row mb-4" style="padding-left: 90px;padding-right: 80px;">
+            <div class="col-3 align-self-center"><label for="firstName " style="font-size: 23px;
+                font-weight: bold;">Email</label></div>
+            <div class="col-9 align-self-center"><input type="email" class="form-control" id="firstName" placeholder="" value="" required="" style="border-radius: 0;" autocomplete="off"></div>
+        </div>
+        <div class="row mb-4" style="padding-left: 90px;padding-right: 80px;">
+            <div class="col-3 align-self-center"><label for="firstName " style="font-size: 23px;
+                font-weight: bold;">Password</label></div>
+            <div class="col-9 align-self-center"><input type="password" class="form-control" id="firstName" placeholder="" value="" required="" style="border-radius: 0;" autocomplete="off"></div>
+        </div>
+        <div class="row pt-5" style="padding-left: 90px;padding-right: 80px;">
+            <div class="col">
+                <p style="font-weight: 500;">I have read and accept the terms & conditions, privacy policy and cookies policy. I acknowledge that I am able to cancel my mentioned acceptance at any time in order not to miss promotions and privileges here. </p>
+            </div>
+        </div>
+        <div class="row pt-5" style="padding-left: 210px;padding-right: 200px;"><input type="checkbox" class="" id="" style="width: 45px !important; height: 45px !important;">
+
+            <div class="col"> <span style="color: #676767;">I agree to the notifications of news and promotions from Homeshow through SMS, application and social media.</span>
+            </div>
+        </div>
+        <div class="row pt-5" style="padding-left: 210px;padding-right: 200px;"><input type="checkbox" class="" id="" style="width: 45px !important; height: 45px !important;">
+
+            <div class="col"> <span style="color: #676767;">I agree to the notifications of news and promotions from Homeshow partners and other ecommerce platform through SMS, application and social media.</span>
+            </div>
+        </div>
+        <div class="row pt-5" style="padding-left: 200px;padding-right: 200px;">
+            <div class="col align-self-center">
+                <div class="text-center"><a style="font-family: Helvetica;background-color: #000;color: #fff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;border-radius: 0;" class="pt-3 pb-3 pl-5 pr-5 mt-5 btn">Accept & Sign up</a></div>
+                <br>
+                <p class="text-center" style="color: #676767;">Already have an account? >>
+                    <a href="#" style="color: #FB0404;font-weight: 500;">Log-in</a>
+                </p>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+{% include "components/collection.html" %} {% include "components/service.html" %} {% endblock %}

@@ -1,0 +1,116 @@
+{% extends "layout/layout.html" %} {% block title %}ABOUT - {% endblock %} {% block head %} {{ super() }} {% endblock %} {% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/card.css') }}">
+<style>
+    .abs {
+        background-image: url('/static/images/used/aboutbg.png') !important;
+        height: 706px !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+</style>
+<div class="wrapper" style="">
+    <div class="container-fluid" style="padding: 20px;">
+        <div class="row mb-3">
+            <div class="col text-center p-3">
+                <div class="row">
+                    <span style="    font-family: Helvetica;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 180px;
+                    color: rgba(251,0,0,1);">XX</span>
+                </div>
+                <span style="font-family: Helvetica;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 50px;
+                color: rgba(0,0,0,1);" class="">Brands</span>
+            </div>
+            <div class="col text-center p-3">
+                <div class="row">
+                    <span style="    font-family: Helvetica;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 180px;
+                    color: rgba(251,0,0,1);">XX</span>
+                </div>
+                <span style="font-family: Helvetica;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 50px;
+                color: rgba(0,0,0,1);" class="">Items</span>
+            </div>
+            <div class="col text-center p-3">
+                <div class="row">
+                    <span style="    font-family: Helvetica;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 180px;
+                    color: rgba(251,0,0,1);">XX</span>
+                </div>
+                <span style="font-family: Helvetica;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 50px;
+                color: rgba(0,0,0,1);" class="">Stafs</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="padding: 90px 90px 90px 0px;">
+        <div class="row mb-3">
+            <div class="col">
+
+                <img src="{{ url_for('static',filename='images/used/about.png') }}" class="bg-img" alt="Responsive image" style="width: 100%;height: auto;">
+            </div>
+            <div class="col-10 col-sm-10 col-lg-4 align-self-center">
+                <span style="font-size: 50px;font-weight: bold;">Let’s keep on <br>&amp; innovating.</span><br><br>
+                <span style="font-size: 25px;line-height: 30px;">Diversified in product lines, Home Show offers a <br>one-stop store where all furniture &amp; construction products are accessible at affordable prices. Together with innovation, Home Show looks far beyond simplicity by staying ahead with designs &amp; functionality in every aspect including products themselves or even its store that aims to maximize customer satisfaction &amp; shopping experience.</span>
+
+            </div>
+        </div>
+        <!-- <div class="row mt-3">
+
+            <div class="col align-self-end" style="text-align: end;">
+                View all
+            </div>
+            <div class="col-10 col-sm-10 col-lg-4">
+                <span style="font-size: 25px;line-height: 30px;">Diversified in product lines, Home Show offers a <br>one-stop store where all furniture &amp; construction products are accessible at affordable prices. Together with innovation, Home Show looks far beyond simplicity by staying ahead with designs &amp; functionality in every aspect including products themselves or even its store that aims to maximize customer satisfaction &amp; shopping experience.</span>
+            </div>
+        </div> -->
+
+    </div>
+
+    <div class="container-fluid" style="padding: 90px;">
+        <div class="row mb-3">
+            <div class="col text-center" style="background-color: #F4F4F4;height: 35vh;"> <span class="collection-name centered" style="font-family: Helvetica;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 60px;
+                color: rgba(0,0,0,1);">Words from the <br> shareholders</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid" style="padding: 90px;">
+        <div class="row mb-3">
+            <div class="col">
+                <img src="{{ url_for('static',filename='images/used/about.png') }}" class="bg-img" alt="Responsive image" style="width: 100%;height: auto;">
+
+            </div>
+            <div class="col-10 col-sm-10 col-lg-4 align-self-center">
+                <span style="font-size: 50px;font-weight: bold;">To sustainability <br> & beyond.</span><br>
+                <span style="font-size: 25px;line-height: 30px;">We at Homeshow believe that no matter how small each of us can make contributions to benefit our environment. We wish to make the smallest difference <br>a great start, until it becomes better and better.</span>
+                <div class="mt-5 pt-2">
+
+                    <a style="    font-family: Helvetica;background-color: #000;color: #fff;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 30px;" class="pt-3 pb-3 pl-5 pr-5 btn">Our Activities</a></div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% include "components/collection.html" %} {% include "components/service.html" %}{% endblock %}
